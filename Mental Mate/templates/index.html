@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with Assistant</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#chatForm").submit(function(e){
+                e.preventDefault(); // Prevent default form submission
+                var userInput = $("#user_input").val(); // Get user input
+                $.post("/chat", { user_input: userInput }, function(data){
+                    $("#chat_history").append("<p>You: " + userInput + "</p>");
+                    $("#chat_history").append("<p>Bot: " + data + "</p>");
+                    $("#user_input").val(""); // Clear input field
+                });
+            });
+        });
+    </script>
+    <style>
+        body{
+            background-color: #121317;
+            color: antiquewhite;
+        }
+        h1 {
+            color: antiquewhite;
+            font-size: 4rem;
+        }
+        label {
+            color: antiquewhite;
+            padding: 2px;
+            font-size: 25px;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            width: 50%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none; /* Remove the default outline */
+        }
+
+        button {
+        background-color: #18f98f;
+        border: none;
+        position: absolute;
+        padding: 10px 25px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    </style>
+</head>
+<body>
+    <h1>Welcome to the Chat with Assistant</h1>
+    <form id="chatForm">
+        <label for="user_input">Enter your message:</label><br>
+        <input type="text" id="user_input" name="user_input" autocomplete="off"><br><br>
+        <button type="submit">Send</button>
+    </form>
+    <div id="chat_history">
+        <!-- Chat history will be displayed here -->
+    </div>
+</body>
+</html>
