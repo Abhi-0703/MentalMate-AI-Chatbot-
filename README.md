@@ -6,7 +6,7 @@
 
 Welcome to the AI Therapist Chatbot project, an innovative and empathetic virtual assistant designed to provide therapeutic conversations. This chatbot leverages advanced AI technology and prompt engineering to offer supportive and thoughtful responses, simulating a real mental health therapist.
 
-**About the Project**
+**About the Project:**
 Harnessing the power of Google Gemini's API, this AI chatbot has been meticulously crafted to:
 
 Listen to Your Problems: Engage in meaningful conversations where the chatbot actively listens to your concerns.
@@ -14,7 +14,7 @@ Provide Appropriate Responses: Receive tailored advice and solutions to help you
 Offer Comfort and Confidentiality: Feel secure and at ease while chatting with a virtual therapist that respects your privacy.
 
 
-**Technologies Used**
+**Technologies Used: **
 This project integrates several technologies to deliver a seamless user experience:
 
 Python: The core programming language used to develop the chatbot's logic and functionalities.
