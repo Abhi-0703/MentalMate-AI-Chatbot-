@@ -14,7 +14,8 @@ Provide Appropriate Responses: Receive tailored advice and solutions to help you
 Offer Comfort and Confidentiality: Feel secure and at ease while chatting with a virtual therapist that respects your privacy.
 
 
-**Technologies Used: **
+**Technologies Used**
+
 This project integrates several technologies to deliver a seamless user experience:
 
 Python: The core programming language used to develop the chatbot's logic and functionalities.
